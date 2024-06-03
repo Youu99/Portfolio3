@@ -1,0 +1,22 @@
+@import "overlay","header","sc1","sc2","sc3","sc4","sc5";
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://webfontworld.github.io/heiroflight/HeirofLight.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+}
+ul,ol,li{
+  list-style: none;
+}
+
+html,
+body {
+  cursor: url("../img/cusor2.svg"), auto;
+}
+
+.sc:nth-child(1),.sc:nth-child(3),.sc:nth-child(4),.sc:nth-child(5){
+  display: none;
+}
