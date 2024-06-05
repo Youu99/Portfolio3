@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // 바텀 메뉴 체인지
 document.addEventListener("DOMContentLoaded", function() {
-  // 'hea_u' 아이디를 가진 요소의 모든 'li' 자식 요소들을 찾습니다.
   var buttons = document.querySelectorAll('#hea_u li');
   
   buttons.forEach(function(button, index) {
@@ -68,12 +67,61 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelectorAll('.sc').forEach(function(section) {
         section.style.display = 'none';
       });
-      
-      // 클릭한 버튼에 해당하는 섹션만 보여줍니다. (인덱스는 0부터 시작하므로 1을 더합니다)
+
+      // 클릭된 버튼에 해당하는 섹션을 보여줍니다.
       var sectionToShow = document.querySelector('.sc' + (index + 1));
       if(sectionToShow) {
-        sectionToShow.style.display = 'block';
+        sectionToShow.style.display = 'block'; // 먼저 요소를 표시합니다.
+        // fadeIn 애니메이션 클래스를 추가합니다.
+        sectionToShow.classList.add('fadeIn'); 
       }
     });
   });
 });
+
+
+// 카드 스와이퍼
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var swiperCard = new Swiper('.swiper-card', {
+    effect: 'cards', // 'cards' 효과 사용
+    grabCursor: true,
+    loop: false, // 루프 설정을 false로 변경하여 슬라이드가 처음으로 돌아가지 않도록 설정
+    cardsEffect: {
+      slideShadows: true, // 슬라이드 그림자
+    },
+  });
+});
+
+
+//이미지 애니메이션
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.swiper-slide');
+
+  slides.forEach(slide => {
+      let img = slide.querySelector('img');
+      let moved = false; // 이미지가 내려갔는지 상태를 추적하는 변수입니다.
+
+      img.addEventListener('click', function() {
+          if (!moved) { // 이미지가 원위치에 있을 때만 작동합니다.
+              let slideHeight = slide.clientHeight;
+              let imgHeight = img.offsetHeight;
+              let moveDistance = imgHeight - slideHeight; // 움직일 거리를 계산합니다.
+
+              if (moveDistance > 0) {
+                  img.style.transform = `translateY(-${moveDistance}px)`;
+                  moved = true; // 이미지가 내려간 상태로 변경합니다.
+
+                  // 일정 시간 후 이미지를 원위치로 돌려놓습니다.
+                  setTimeout(() => {
+                      img.style.transform = 'translateY(0)';
+                      moved = false; // 이미지 상태를 원위치로 변경합니다.
+                  }, 7000); // 여기서는 3초 후에 실행됩니다. 필요에 따라 조정 가능합니다.
+              }
+          }
+      });
+  });
+});
+
+//

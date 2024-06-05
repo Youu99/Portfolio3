@@ -69,6 +69,7 @@ body .grid-lines {
   width: 4vw;
 }
 #hea_u li img:hover {
+  cursor: url("../img/cusor_pointer2.svg"), pointer;
   transform: scale(1.1);
   transition: 0.5s;
 }
@@ -104,7 +105,7 @@ header div p {
   position: relative;
 }
 
-.sc {
+.sc1 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -426,27 +427,355 @@ header div p {
   transform: rotateY(0deg);
 }
 
-.sc {
+.sc3 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 140px 0px;
+  padding: 85px 0px;
   display: flex;
   flex-direction: column;
 }
 
-.sc {
+#sc3title {
+  padding-left: 220px;
+}
+#sc3title h1 {
+  font-size: 60px;
+  font-family: "Black Ops One";
+}
+
+#skills_box {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 150px;
+}
+
+#skills_menu {
+  width: 80%;
+  perspective: 2400px;
+  margin: 70px 0 0 30px;
+}
+
+#skills_menu_button {
+  width: 100%;
+  height: 550px;
+  background-color: black;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transform: rotateY(30deg);
+  transition: all 0.5s;
+  box-shadow: 5px 5px 5px #777;
+}
+#skills_menu_button:hover {
+  transform: rotateY(0deg);
+}
+#skills_menu_button ul {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+#skills_menu_button ul li {
+  margin: 40px 0;
+  font-family: "Black Ops One";
+  color: #fff;
+  font-size: 48px;
+  cursor: url("../img/cusor_pointer2.svg"), pointer;
+}
+
+#skills_Tag {
+  width: 100%;
+  height: 650px;
+  background-image: url(../img/bdtest2.png);
+  background-position: center;
+  background-size: 100% 100%;
+  margin: 50px 0 0 20px;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#skills_tag_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.skills_tab {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+}
+.skills_tab h3 {
+  font-family: "Black Ops One";
+  color: #934EA6;
+  font-size: 34px;
+}
+
+#skill_icon ul {
+  display: flex;
+  margin-top: 20px;
+}
+#skill_icon ul li {
+  width: 11%;
+}
+#skill_icon ul li img {
+  width: 90%;
+}
+
+#skill_icon2 ul {
+  display: flex;
+  margin-top: 20px;
+}
+#skill_icon2 ul li {
+  width: 11%;
+}
+#skill_icon2 ul li img {
+  width: 100%;
+}
+
+#skill_explanation {
+  margin-top: 20px;
+}
+#skill_explanation p {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+}
+#skill_explanation p:nth-child(2) {
+  margin-top: 30px;
+}
+#skill_explanation p b {
+  color: #561AD9;
+}
+
+.sc4 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 140px 0px;
+  padding: 85px 0px;
   display: flex;
   flex-direction: column;
 }
 
-.sc {
+#sc4title {
+  padding-left: 220px;
+}
+#sc4title h1 {
+  font-size: 60px;
+  font-family: "Black Ops One";
+}
+
+#swiper_box {
+  width: 100%;
+  padding: 0 120px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#swiper_page_box {
+  width: 50%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0 0 90px;
+  overflow: hidden;
+  padding: 0 20px 10px 0;
+}
+
+.swiper-card {
+  width: 85%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border: 1px solid #8836BF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: url("../img/cusor_pointer2.svg"), pointer;
+}
+
+.swiper-card .swiper-slide img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  transition: transform 5s ease-in-out;
+}
+
+.fadeIn {
+  animation: fadeInEffect 1s;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#swiper_explanation {
+  width: 38%;
+}
+
+.ex_swiper {
+  width: 100%;
+  height: 640px;
+  border: 1px solid #8836BF;
+  background-color: #fff;
+  margin: 50px 0 0 50px;
+  box-shadow: 3px -3px #F1C2F2, 6px -6px #934EA6, 9px -9px #8836BF, 12px -12px #C394F2, 15px -15px #561AD9;
+}
+
+.ex_box {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.ex_box h2 {
+  font-family: "Black Ops One";
+  font-size: 48px;
+}
+.ex_box ul {
+  display: flex;
+  margin-top: 40px;
+}
+.ex_box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20%;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #561AD9;
+  font-weight: bold;
+  background-image: linear-gradient(-225deg, #561AD9 0%, #C394F2 25%, #8836BF 50%, #934EA6 75%, #F1C2F2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 20px 0 0;
+}
+
+.ex_tilte {
+  font-family: "Black Ops One";
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.ex_sp {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.ex_color_box {
+  display: flex;
+}
+
+.ex_color {
+  margin: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color_tag {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.ex_btn {
+  width: 120px;
+  height: 50px;
+  border: 2px solid #8836BF;
+  box-shadow: 2px 2px 2px #8836BF, -2px -2px 6px #8836BF inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 0;
+  cursor: url("../img/cusor_pointer2.svg"), pointer;
+}
+.ex_btn:hover {
+  box-shadow: -2px -2px 2px #8836BF, 2px 2px 6px #8836BF inset;
+  background-image: linear-gradient(-225deg, #561AD9 0%, #C394F2 25%, #8836BF 50%, #934EA6 75%, #F1C2F2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ex_btn a {
+  color: #561AD9;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: "Black Ops One", "Noto Sans KR";
+  cursor: url("../img/cusor_pointer2.svg"), pointer;
+}
+
+.co1 {
+  background-color: #8836BF;
+}
+
+.co2 {
+  background-color: #ffe680;
+}
+
+.co3 {
+  background-color: #4B6587;
+}
+
+.ex_overflow {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+}
+
+.ex_about {
+  margin-top: 40px;
+}
+.ex_about p {
+  font-family: "Noto Sans KR";
+  font-size: 17px;
+}
+.ex_about p b {
+  color: #561AD9;
+  font-size: 18px;
+}
+.ex_about h2 {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.sc5 {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -468,6 +797,11 @@ ul, ol, li {
 html,
 body {
   cursor: url("../img/cusor2.svg"), auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .sc:nth-child(2), .sc:nth-child(3), .sc:nth-child(4), .sc:nth-child(5) {
