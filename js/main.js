@@ -91,8 +91,28 @@ document.addEventListener('DOMContentLoaded', function() {
     cardsEffect: {
       slideShadows: true, // 슬라이드 그림자
     },
+    on: {
+      init: function () {
+        // 초기화 시 첫 번째 ex_box만 보이도록 설정
+        displayExBox(0);
+      },
+      slideChange: function () {
+        // 슬라이드가 변경될 때 마다 실행
+        displayExBox(this.activeIndex);
+      }
+    }
   });
 });
+
+function displayExBox(index) {
+  var exBoxes = document.querySelectorAll('.ex_box');
+  // 모든 ex_box를 숨김
+  exBoxes.forEach(function(box) {
+    box.style.display = 'none';
+  });
+  // 현재 활성화된 슬라이드에 해당하는 ex_box만 보이도록 설정
+  exBoxes[index].style.display = 'block';
+}
 
 
 //이미지 애니메이션
@@ -124,4 +144,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-//
+//마지막 자기소개 슬라이드
+
+const contentCon = document.getElementById('content_con');
+
+document.getElementById('concluson_img').addEventListener('mouseenter', function() {
+    contentCon.style.transition = 'transform 18s ease'; // 
+    contentCon.style.transform = 'translateY(-67%)';
+});
+
+document.getElementById('concluson_img').addEventListener('mouseleave', function() {
+    contentCon.style.transition = 'transform 5s ease'; // 
+    contentCon.style.transform = 'translateY(0)'; // 
+});
