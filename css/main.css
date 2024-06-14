@@ -544,29 +544,29 @@ header div p {
   width: 90%;
 }
 
-#skill_icon2 ul {
+.skill_icon2 ul {
   display: flex;
   margin-top: 20px;
 }
-#skill_icon2 ul li {
+.skill_icon2 ul li {
   width: 11%;
 }
-#skill_icon2 ul li img {
+.skill_icon2 ul li img {
   width: 100%;
 }
 
-#skill_explanation {
+.skill_explanation {
   margin-top: 20px;
 }
-#skill_explanation p {
+.skill_explanation p {
   width: 100%;
   font-family: "Noto Sans KR";
   font-size: 1vw;
 }
-#skill_explanation p:nth-child(2) {
+.skill_explanation p:nth-child(2) {
   margin-top: 30px;
 }
-#skill_explanation p b {
+.skill_explanation p b {
   color: #561AD9;
   font-size: 1.05vw;
 }
